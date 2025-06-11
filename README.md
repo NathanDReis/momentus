@@ -3,7 +3,7 @@
 
 **Momentus** é a solução ideal para a organização dos cultos, oferecendo uma plataforma intuitiva para o planejamento detalhado de cada etapa da celebração. O app fortalece a união da comunidade e assegura que cada momento seja conduzido com excelência e reverência.
 
-# 🎯 Projeto: App de Cronograma de Culto (Doxologia)
+# 🎯 Projeto:
 
 ## 🧩 Categoria
 App de Organização Colaborativa + Gestão de Eventos
@@ -27,18 +27,6 @@ Um app para planejar, montar e colaborar no cronograma de cultos, incluindo:
 - Múltiplos usuários podem acessar e editar o cronograma.
 - Notificações ou e-mails para responsáveis (pregador, louvor etc.).
 - Possibilidade de aprovação pelo líder antes de publicar o cronograma final.
-
----
-
-## 📦 Como MongoDB entra nessa stack?
-MongoDB é perfeito para esse tipo de dado porque:
-
-- O cronograma pode ter estrutura flexível (alguns cultos têm 3 partes, outros 10).
-- Você pode ter coleções como:
-  - `eventos` → cada culto com data, título, local
-  - `programacoes` → cada etapa do culto (ex: louvor, oração, palavra)
-  - `usuarios` → pregadores, cantores, líderes
-  - `notificacoes` (opcional) → avisos de alterações
 
 ---
 
