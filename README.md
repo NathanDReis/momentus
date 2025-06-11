@@ -72,8 +72,10 @@ Vamos definir coleções básicas com seus campos principais:
   "email": "joao@email.com",
   "role": "pastor" // ou cantor, líder, membro
 }
+```
 
 ## 📦 Coleção: cultos (ou eventos)
+```json
 {
   "_id": "ObjectId",
   "titulo": "Culto de Gratidão",
@@ -87,8 +89,10 @@ Vamos definir coleções básicas com seus campos principais:
     { "usuarioId": "bbb222", "permissao": "visualizador" }
   ]
 }
+```
 
 ## 📦 Coleção: etapas
+```json
 {
   "_id": "ObjectId",
   "cultoId": "ObjectId",
@@ -111,8 +115,10 @@ Vamos definir coleções básicas com seus campos principais:
     }
   ]
 }
+```
 
 ## 📦 (Opcional) Coleção: notificacoes
+```json
 {
   "_id": "ObjectId",
   "usuarioId": "ObjectId",
@@ -121,6 +127,7 @@ Vamos definir coleções básicas com seus campos principais:
   "lido": false,
   "data": "ISODate(...)"
 }
+```
 
 ## 🚧 3. Roadmap de Desenvolvimento
 Aqui está um plano prático e escalável para seu MVP:
