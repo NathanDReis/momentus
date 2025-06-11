@@ -58,6 +58,107 @@ Um app para planejar, montar e colaborar no cronograma de cultos, incluindo:
 - Sincronização em tempo real (opcional): Socket.IO ou Firebase
 - Hospedagem: MongoDB Atlas + Railway ou Render para API
 
+# 🗃️ 2. Modelo de Dados para MongoDB
+
+Vamos definir coleções básicas com seus campos principais:
+
+---
+
+## 📦 Coleção: usuarios
+```json
+{
+  "_id": "ObjectId",
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "role": "pastor" // ou cantor, líder, membro
+}
+
+## 📦 Coleção: cultos (ou eventos)
+{
+  "_id": "ObjectId",
+  "titulo": "Culto de Gratidão",
+  "data": "2025-06-15T19:30:00Z",
+  "descricao": "Celebração com a comunidade",
+  "status": "rascunho", // ou "publicado"
+  "responsavel": "ObjectId", // ID do usuário
+  "etapas": ["ObjectId"], // lista de IDs da programação
+  "participantes": [
+    { "usuarioId": "aaa111", "permissao": "editor" },
+    { "usuarioId": "bbb222", "permissao": "visualizador" }
+  ]
+}
+
+## 📦 Coleção: etapas
+{
+  "_id": "ObjectId",
+  "cultoId": "ObjectId",
+  "ordem": 1,
+  "titulo": "Louvor",
+  "horario": "19:30",
+  "observacoes": "3 músicas do repertório atual",
+  "responsaveis": [
+    {
+      "tipo": "líder de louvor", // ou "pregador", "leitora", etc.
+      "usuarioId": "ObjectId"
+    },
+    {
+      "tipo": "cantor",
+      "usuarioId": "ObjectId"
+    },
+    {
+      "tipo": "cantor",
+      "usuarioId": "ObjectId"
+    }
+  ]
+}
+
+## 📦 (Opcional) Coleção: notificacoes
+{
+  "_id": "ObjectId",
+  "usuarioId": "ObjectId",
+  "cultoId": "ObjectId",
+  "mensagem": "Você foi adicionado como responsável pelo louvor",
+  "lido": false,
+  "data": "ISODate(...)"
+}
+
+## 🚧 3. Roadmap de Desenvolvimento
+Aqui está um plano prático e escalável para seu MVP:
+
+- Fase 1: Planejamento e Setup
+Criar estrutura do projeto com React Native (via Expo)
+
+Criar API com Express + MongoDB (usando Mongoose)
+
+Configurar banco na MongoDB Atlas
+
+- Fase 2: Funcionalidades Básicas
+Tela de login e autenticação (Firebase Auth ou JWT simples)
+
+CRUD de Cultos
+
+CRUD de Etapas
+
+Atribuir responsáveis
+
+Visualizar cronograma no modo leitura
+
+- Fase 3: Compartilhamento e Colaboração
+Permitir convite via link/código
+
+Controle de permissões (quem pode editar)
+
+Feedback em tempo real (opcional: WebSocket)
+
+- Fase 4: Extras
+Notificações
+
+Histórico de alterações
+
+Exportar cronograma em PDF
+
+Tema escuro (modo noite do culto 😄)
+
 ---
 
 ## ✅ MVP (Mínimo Produto Viável)
