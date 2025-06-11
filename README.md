@@ -1,4 +1,4 @@
-# momentus
+# Momentus
 **Precisão e reverência em cada detalhe.**
 
 **Momentus** é a solução ideal para a organização dos cultos, oferecendo uma plataforma intuitiva para o planejamento detalhado de cada etapa da celebração. O app fortalece a união da comunidade e assegura que cada momento seja conduzido com excelência e reverência.
