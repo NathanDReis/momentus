@@ -135,36 +135,36 @@ Aqui está um plano prático e escalável para seu MVP:
 - Fase 1: Planejamento e Setup
 Criar estrutura do projeto com React Native (via Expo)
 
-Criar API com Express + MongoDB (usando Mongoose)
+  - Criar API com Express + MongoDB (usando Mongoose)
 
-Configurar banco na MongoDB Atlas
+  - Configurar banco na MongoDB Atlas
 
 - Fase 2: Funcionalidades Básicas
 Tela de login e autenticação (Firebase Auth ou JWT simples)
 
-CRUD de Cultos
+  - CRUD de Cultos
 
-CRUD de Etapas
+  - CRUD de Etapas
 
-Atribuir responsáveis
+  - Atribuir responsáveis
 
-Visualizar cronograma no modo leitura
+  - Visualizar cronograma no modo leitura
 
 - Fase 3: Compartilhamento e Colaboração
 Permitir convite via link/código
 
-Controle de permissões (quem pode editar)
+  - Controle de permissões (quem pode editar)
 
-Feedback em tempo real (opcional: WebSocket)
+  - Feedback em tempo real (opcional: WebSocket)
 
 - Fase 4: Extras
-Notificações
+  - Notificações
 
-Histórico de alterações
+  - Histórico de alterações
 
-Exportar cronograma em PDF
+  - Exportar cronograma em PDF
 
-Tema escuro (modo noite do culto 😄)
+  - Tema escuro (modo noite do culto 😄)
 
 ---
 
